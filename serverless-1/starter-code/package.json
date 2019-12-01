@@ -1,0 +1,19 @@
+{
+  "name": "serverless-http-metrics",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "clean": "@powershell rm -force -recurse starter-code/",
+    "build": "@powershell Copy-Item \"package.json\" -Destination \"tmp/package.json\" && @powershell mkdir -Force zip-files/ && @powershell Compress-Archive -Force -LiteralPath ./ -Destination zip-files/http-metrics.zip",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.1"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.492.0"
+  },
+  "description": ""
+}
